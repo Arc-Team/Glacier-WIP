@@ -84,14 +84,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml
 
 # media config xml file
 PRODUCT_COPY_FILES += \
-    device/htc/glacier/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/glacier/media_codecs.xml:system/etc/media_codecs.xml \
-    device/htc/glacier/audio_policy.conf:system/etc/audio_policy.conf
+    device/htc/glacier/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
+    device/htc/glacier/prebuilt/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    device/htc/glacier/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf
 
 # Wifi firmware
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
@@ -179,7 +178,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += \
-    device/htc/glacier/prebuilt/gps.conf:system/etc/gps.conf
+    device/htc/glacier/prebuilt/etc/gps.conf:system/etc/gps.conf
 
 # Build.prop additions
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -206,29 +205,29 @@ PRODUCT_COPY_FILES += \
 
 # gsm config xml file
 PRODUCT_COPY_FILES += \
-    device/htc/glacier/prebuilt/voicemail-conf.xml:system/etc/voicemail-conf.xml
+    device/htc/glacier/prebuilt/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    device/htc/glacier/prebuilt/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/glacier/prebuilt/keylayout/glacier-keypad.kl:system/usr/keylayout/glacier-keypad.kl
+    device/htc/glacier/prebuilt/usr/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/htc/glacier/prebuilt/usr/keylayout/glacier-keypad.kl:system/usr/keylayout/glacier-keypad.kl
 
 # Keychars
 PRODUCT_COPY_FILES += \
-    device/htc/glacier/prebuilt/keychars/glacier-keypad.kcm.bin:system/usr/keychars/glacier-keypad.kcm.bin
+    device/htc/glacier/prebuilt/usr/keychars/glacier-keypad.kcm.bin:system/usr/keychars/glacier-keypad.kcm.bin
 
 # IDC Files
 PRODUCT_COPY_FILES += \
-    device/htc/glacier/prebuilt/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
-    device/htc/glacier/prebuilt/idc/glacier-keypad.idc:system/usr/idc/glacier-keypad.idc \
-    device/htc/glacier/prebuilt/idc/curcial-oj.idc:system/usr/idc/curcial-oj.idc \
+    device/htc/glacier/prebuilt/usr/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
+    device/htc/glacier/prebuilt/usr/idc/glacier-keypad.idc:system/usr/idc/glacier-keypad.idc \
+    device/htc/glacier/prebuilt/usr/idc/curcial-oj.idc:system/usr/idc/curcial-oj.idc \
 
 # Firmware
 PRODUCT_COPY_FILES += \
-    device/htc/glacier/prebuilt/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
-    device/htc/glacier/prebuilt/firmware/default.acdb:system/etc/firmware/default.acdb \
-    device/htc/glacier/prebuilt/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
-    device/htc/glacier/prebuilt/firmware/default_org_WA.acdb:system/etc/firmware/default_org_WA.acdb
+    device/htc/glacier/prebuilt/etc/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
+    device/htc/glacier/prebuilt/etc/firmware/default.acdb:system/etc/firmware/default.acdb \
+    device/htc/glacier/prebuilt/etc/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
+    device/htc/glacier/prebuilt/etc/firmware/default_org_WA.acdb:system/etc/firmware/default_org_WA.acdb
 
 # Pick up overlay for features that depend on non-open-source files
 DEVICE_PACKAGE_OVERLAYS := vendor/htc/glacier/overlay
@@ -270,10 +269,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Config
 PRODUCT_COPY_FILES += \
-    device/htc/glacier/prebuilt/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
-    device/htc/glacier/prebuilt/AdieHWCodec_WA.csv:system/etc/AdieHWCodec_WA.csv \
-    device/htc/glacier/prebuilt/AudioBTID.csv:system/etc/AudioBTID.csv \
-    device/htc/glacier/prebuilt/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv
+    device/htc/glacier/prebuilt/etc/AdieHWCodec.csv:system/etc/AdieHWCodec.csv \
+    device/htc/glacier/prebuilt/etc/AdieHWCodec_WA.csv:system/etc/AdieHWCodec_WA.csv \
+    device/htc/glacier/prebuilt/etc/AudioBTID.csv:system/etc/AudioBTID.csv \
+    device/htc/glacier/prebuilt/etc/TPA2051_CFG.csv:system/etc/TPA2051_CFG.csv
 
 PRODUCT_PROPERTY_OVERRIDES += \
       media.a1026.nsForVoiceRec=0 \
@@ -281,7 +280,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Config
 PRODUCT_COPY_FILES += \
-    device/htc/glacier/prebuilt/A1026_CFG.csv:system/etc/A1026_CFG.csv \
+    device/htc/glacier/prebuilt/etc/A1026_CFG.csv:system/etc/A1026_CFG.csv \
 
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)

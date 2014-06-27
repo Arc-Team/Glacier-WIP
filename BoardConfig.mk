@@ -53,7 +53,7 @@ TARGET_KERNEL_NO_MODULES := true
 
 # Kernel
 BUILD_KERNEL := true
-TARGET_KERNEL_SOURCE := kernel/htc/msm7x30-3.0
+TARGET_KERNEL_SOURCE := kernel/htc/glacier
 
 # Wifi
 WIFI_BAND := 802_11_ABGN
@@ -90,7 +90,7 @@ USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_NO_HW_VSYNC := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK -DNO_UPDATE_PREVIEW
-BOARD_EGL_CFG := device/htc/glacier/egl.cfg
+BOARD_EGL_CFG := device/htc/glacier/prebuilt/lib/egl/egl.cfg
 TARGET_USES_ION := true
 
 # Camera
