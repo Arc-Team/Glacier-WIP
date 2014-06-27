@@ -26,7 +26,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from new common msm7x30
--include device/htc/msm7x30-common/BoardConfigCommon.mk
+-include device/htc/glacier/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/htc/glacier/BoardConfigVendor.mk

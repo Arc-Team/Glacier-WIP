@@ -15,7 +15,7 @@
 #
 
 # common msm7x30 configs
-$(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
+$(call inherit-product, device/htc/glacier/msm7x30.mk)
 
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += \
