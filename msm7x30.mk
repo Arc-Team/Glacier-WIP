@@ -15,7 +15,7 @@
 #
 
 # Common proprietary blobs
-$(call inherit-product-if-exists, vendor/htc/msm7x30-common/msm7x30-vendor.mk)
+$(call inherit-product-if-exists, device/htc/glacier/msm7x30-vendor.mk)
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
