@@ -1,40 +1,18 @@
-#
-# system.prop for glacier
-#
-ro.sf.lcd_density=240
 
-# Modify MMS APN retry timer from 5s to 2s.
-ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
-
+# RIL
 rild.libpath=/system/lib/libhtc_ril.so
 ro.telephony.ril.v3=signalstrengthgsm
+ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
 
-# glacier RF team request
+# 3G/HSDPA
 ro.ril.enable.dtm=0
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
 ro.ril.hsxpa=3
 
-# For HSDPA low throughput
-ro.ril.disable.power.collapse=1
-
-# Define TCP buffer sizes
-net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
-
-# Default network type.
-# 0 => WCDMA preferred.
 ro.telephony.default_network=0
-
-wifi.interface=wlan0
-wifi.supplicant_scan_interval=120
-
 mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
-
-# Properties of Scalado Denoise param.
 postprocess.iso_midband=400
 postprocess.denoise_level=5
-
-# Recording Audio Workaround
 ro.camera.sound.disabled=1
-
