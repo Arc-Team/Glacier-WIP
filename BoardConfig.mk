@@ -63,7 +63,6 @@ BOARD_EGL_CFG := device/htc/glacier/prebuilt/lib/egl/egl.cfg
 BOARD_EGL_NEEDS_LEGACY_FB := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK 
 
-
 # Camera
 BOARD_HAVE_HTC_FFC := true
 BOARD_USES_QCOM_LEGACY_CAM_PARAMS := true
