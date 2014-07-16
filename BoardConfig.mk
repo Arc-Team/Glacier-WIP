@@ -172,8 +172,5 @@ BOARD_SEPOLICY_UNION += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/glacier/overlay
 
-# Device-Settings
-BOARD_DEVICE_SETTINGS := device/htc/glacier/DeviceSettings
-
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file

@@ -1,1 +1,1 @@
-add_lunch_combo cm_glacier-eng
+add_lunch_combo cm_glacier-userdebug
