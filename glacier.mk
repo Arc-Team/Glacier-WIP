@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
+    Torch \
     libnetcmdiface \
     com.android.future.usb.accessory \
     libsurfaceflinger_client
@@ -188,8 +189,6 @@ PRODUCT_COPY_FILES += \
 # Device Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
-    ro.com.google.networklocation=1 \
-    ro.com.google.gmsversion=4.0_r1 \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
@@ -206,13 +205,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.logs=0 \
     dev.pm.dyn_samplingrate=1 \
     ro.opengles.version=131072 \
-    ro.telephony.ril.v3=signalstrengthgsm \
+    ro.telephony.ril.v3=signalstrength \
     ro.vold.umsdirtyratio=20 \
     ro.zram.default=18 \
     htc.audio.alt.enable=0 \
     htc.audio.hac.enable=0 \
     media.a1026.nsForVoiceRec=0 \
-    media.a1026.enableA1026=1
+    media.a1026.enableA1026=1 \
+    ro.bq.gpu_to_cpu_unsupported=1
 
 # Device Tags
 PRODUCT_TAGS += dalvik.gc.type-precise
