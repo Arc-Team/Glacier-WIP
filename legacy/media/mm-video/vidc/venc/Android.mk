@@ -36,14 +36,16 @@ libmm-venc-def += -DMAX_RES_1080P_EBI
 libOmxVdec-def += -DPROCESS_EXTRADATA_IN_OUTPUT_PORT
 libmm-venc-def += -D_MSM8974_
 endif
-ifeq ($(TARGET_BOARD_PLATFORM),msm7627a)
+ifeq ($(TARGET_BOARD_PLATFORM),msm7x27a)
 libmm-venc-def += -DMAX_RES_720P
 endif
 ifeq ($(TARGET_BOARD_PLATFORM),msm7x30)
 libmm-venc-def += -DMAX_RES_720P
 endif
 ifeq ($(TARGET_USES_ION),true)
-libmm-venc-def += -DUSE_ION
+ifneq ($(BOARD_USES_PMEM_ADSP),true)
+libOmxVdec-def += -DUSE_ION
+endif
 endif
 libmm-venc-def += -D_ANDROID_ICS_
 # ---------------------------------------------------------------------------------
@@ -57,7 +59,6 @@ libmm-venc-inc      += bionic/libstdc++/include
 libmm-venc-inc      += $(LOCAL_PATH)/inc
 libmm-venc-inc      += $(OMX_VIDEO_PATH)/vidc/common/inc
 libmm-venc-inc      += device/htc/glacier/legacy/media/mm-core/inc
-#libmm-venc-inc      += bionic/libc/kernel/common/linux
 libmm-venc-inc      += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 libmm-venc-inc      += device/htc/glacier/legacy/media/libstagefrighthw
 libmm-venc-inc      += device/htc/glacier/legacy/display/libgralloc
